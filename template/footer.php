@@ -4,6 +4,12 @@
 		offest:400,
 		duration:1000
 	});
+	
+	const success=document.querySelector('.success');
+	
+	setTimeout(()=>{
+		success.style.display="none";
+	},3000)
   </script>
 </div>
 </body>

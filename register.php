@@ -6,7 +6,7 @@ $title= "Register";
   require_once('config/db.php'); 
   
   //check the user if login with session
-  if(isset($_SEESION['logged_id'])){
+  if(isset($_SESSION['logged_in'])){
 	  header('location:index.php');
   }
   
@@ -33,7 +33,7 @@ $title= "Register";
 		  array_push($errors,"name is required");
 	  }
 	  if(empty($password)){
-		  array_push($errors,"email is required");
+		  array_push($errors,"password is required");
 	  }
 	 
 	  
@@ -62,12 +62,12 @@ $title= "Register";
 		  $mysqli->query($query);
 		  
 		  //session for user login
-		  $_SEESION['logged_in']=true;
+		  $_SESSION['logged_in']=true;
 		  //last user id register in system
-		  $_SEESION['user_id']=$mysqli->insert_id;
-		  $_SEESION['user_name']=$name;
+		  $_SESSION['user_id']=$mysqli->insert_id;
+		  $_SESSION['user_name']=$name;
 		  //msg after login
-		  $_SEESION['success_message']="Welcome , $name 🤖";
+		  $_SESSION['success_message']="Welcome with us , $name 🤖";
 		  
 		  header("location:index.php");
 	  }
@@ -125,8 +125,8 @@ $title= "Register";
  
 
  
- <button class="btn">Submit</button>
-<span class="register-dwon">  Signup or, if you have an account you can <a href="#">sign in</a></span>
+ <button class="btn">Enjoy</button>
+<span class="register-dwon">  Signup or, if you have an account you can <a href="login.php">sign in</a></span>
  </form>
 
  </div>

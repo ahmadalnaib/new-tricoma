@@ -1,7 +1,7 @@
 <!--config file--php-->
 <?php
 
-
+session_start();
 //config file
 require_once('config/app.php') 
 ?>
@@ -22,8 +22,13 @@ require_once('config/app.php')
 <nav>
 <h2 class="logo">Ahmed</h2>
   <ul>
- <li><a href="#">Login</a></li>
+  <?php if(!isset($_SESSION['logged_in'])): ?>
+    <li><a href="login.php">Login</a></li>
   <li><a class="register" href="register.php">Register</a></li>
+  <?php else :?>
+  <li><a href="#"><?php echo $_SESSION['user_name'] ?></a></li>
+  <li><a class="register" href="logout.php">Logout</a></li>
+  <?php endif ; ?>
 </ul>
 </nav>
 
@@ -31,4 +36,4 @@ require_once('config/app.php')
 <!-- start container-->
 <div class="container">
 <!-- session message-->
- <?php include'successmsg.php' ?>
+ <?php include'template/successmsg.php' ;?>
