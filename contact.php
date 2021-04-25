@@ -1,4 +1,8 @@
 <?php
+
+
+
+
 $title= "Contact";
 //header file
  require_once('template/header.php');  
@@ -7,7 +11,7 @@ $title= "Contact";
     
  
  ?>
- 
+ <?php if(isset($_SESSION['logged_in'])): ?>
  
  
  <!--Html contact-form -->
@@ -65,7 +69,10 @@ $title= "Contact";
  </div>
  </div>
  
-
+<?php else: ?>
+ 
+<?php   header("location:register.php");?>
+<?php endif ?>
 
 <?php require_once('template/footer.php') ?>
 

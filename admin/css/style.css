@@ -25,6 +25,7 @@ nav{
 	height:100vh;
 	z-index:100;
 	transform:translateX(-100%);
+	padding:2rem;
 	
 }
 
@@ -32,6 +33,7 @@ nav{
 nav .logo {
 	padding:30px 0;
 	text-align:center;
+	color:#FBBF24;
 }
 
 nav ul {
@@ -59,6 +61,8 @@ header{
 	font-size:130%;
 	text-align:center;
 	position:relative;
+	padding:2rem;
+	margin-bottom:1rem;
 }
 
 button{
@@ -99,23 +103,27 @@ body.show-nav{
 	  
 	  border-collapse: collapse;
 	  width: 100%;
+	  margin-top:2rem;
+	  text-align:center;
 	}
 
 	#message td, #message th {
 	  border: 1px solid #ddd;
 	  padding: 8px;
+	  text-align:center;
 	}
 
-	#message tr:nth-child(even){background-color: #f2f2f2;}
+	#message tr:nth-child(even){background-color: #E0E7FF;}
 
-	#message tr:hover {background-color: #D1FAE5;}
+	#message tr:hover {background-color: #A5B4FC;}
 
 	#message th {
 	  padding-top: 12px;
 	  padding-bottom: 12px;
 	  text-align: left;
-	  background-color: #4CAF50;
+	  background-color: #000;
 	  color: white;
+	  text-align:center;
 	}
 	
 	
@@ -125,7 +133,7 @@ body.show-nav{
 	}
 	
 	.btn-danger{
-		background:red;
+		background:#000;
 		color:#fff;
 		border:none;
 		padding:10px 20px;
@@ -136,7 +144,7 @@ body.show-nav{
 	}
 	
 	.btn-edit{
-		background:#A5B4FC;
+		background:#000;
 		color:#fff;
 		border:none;
 		padding:10px 20px;
@@ -146,3 +154,105 @@ body.show-nav{
 	}
 	
 
+
+    /*create users*/
+	 .register{
+		 background:#000;
+		 color:#fff;
+		 font-style:bold;
+		 border-radius:10px;
+		 padding:10px 20px;
+		 
+	 }
+	 
+	 
+	 /* contact style*/
+	 .contact-container{
+		 display:flex;
+		 flex-direction:row;
+		 min-height:100vh;
+		 justify-content:center;
+		 align-items:center;
+		 flex-wrap:wrap;
+	 }
+	 
+	 /*contact-content*/
+	 
+	.form{
+		background:#fff;
+		width:600px;
+		padding:20px 40px;
+		border-radius:5px;
+		box-shadow:0 2px 10px rgba(0,0,0,0.3);
+		margin:2rem;
+	}
+	
+	.form-control label{
+		display:block;
+		padding-bottom:1rem;
+		font-size:1.5rem;
+		color:#777;
+	}
+	
+	 .form-control input,textarea,select{
+		 border: 2px solid #f0f0f0;
+		 display:block;
+		 width:100%;
+		 padding:1.2rem;
+		 margin-bottom:10px;
+         border-radius: 5px;
+	 }
+	 
+	 .contact-container h2{
+	      padding-bottom:2rem;
+		 text-align:center;
+		 color:#2563EB;
+	 }
+	 
+	 .contact-img p {
+		 font-size:5rem;
+		 color:#2563EB;
+		 padding-bottom:1rem;
+	 }
+	 
+	  textarea:focus{
+       outline: none;
+       border-color: blue;
+       }
+	   input:focus{
+		   outline:none;
+		   border-color:blue;
+	   }
+	   
+	   .btn {
+		  display: block;
+		  border: none;
+		  padding: 10px 20px;
+		  text-align: center;
+		  color: #fff;
+		  background: #FBBF24;
+		  margin-top: 2rem;
+		   cursor:pointer;
+	   }
+	   
+	   .err{
+		color:red;
+		padding:1rem;
+		text-align:center;
+		font-size:1.3rem;
+		margin:5px;
+		text-align:justify;
+		
+	}
+	
+	
+	.register{
+		 background:#000;
+		 color:#fff;
+		 font-style:bold;
+		 border-radius:10px;
+		 padding:10px 20px;
+		 margin-top:4rem;
+		 
+	 }
+	   

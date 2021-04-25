@@ -20,7 +20,7 @@ require_once('config/app.php')
 <body>
 
 <nav>
-<h2 class="logo">Ahmed</h2>
+<a href="<?php echo  $config['App_Url'] ?>index.php" class="logo"><img src="img/logo.png"></a>
   <ul>
   <?php if(!isset($_SESSION['logged_in'])): ?>
     <li><a href="login.php">Login</a></li>

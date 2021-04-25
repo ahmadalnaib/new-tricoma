@@ -76,6 +76,11 @@
 		 
 	 }
 	 
+	 .logo img {
+		 width:200px;
+		 height:200px;
+	 }
+	 
 	 .register{
 		 background:#000;
 		 color:#fff;
@@ -294,7 +299,13 @@
 	
 	/* show message*/
 	.main-show-message{
-		
+		display:flex;
+		flex-direction:column;
+		justify-content:space-between;
+		align-items:center;
+		height:50vh;
+		margin-top:4rem;
+		flex-wrap:wrap;
 	}
 	.flex-message{
 		 display:grid;
@@ -303,6 +314,13 @@
 		  gap: 20px;
 		  align-items: center;
 	}
+	
+	 @media(max-width:700px)
+	   {
+		   .flex-message{
+			   display:block;
+		   }
+	   }
 	
 	.info-message {
 		background:#fff;

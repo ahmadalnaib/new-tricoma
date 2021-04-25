@@ -39,7 +39,7 @@ $title= "Register";
 	  
 	  //query if the user is exists;
 	  if(!count($errors)){
-	  $userExists=$mysqli->query("select id, email, password,name from users where email='$email' limit 1");
+	  $userExists=$mysqli->query("select id, email, password,name,role from users where email='$email' limit 1");
 	  
 	  if(!$userExists->num_rows){
 		   array_push($errors," oops! email not registered 😲");
@@ -51,6 +51,7 @@ $title= "Register";
 				$_SESSION['logged_in']=true;
 				$_SESSION['user_id']=$user['id'];
 				$_SESSION['user_name']=$user['name'];
+				$_SESSION['user_role']=$user['role'];
 				$_SESSION['success_message']="hey welecome Back $user[name] 🎉🎉";
 				header('location:index.php');
 				die();
