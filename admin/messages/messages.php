@@ -1,7 +1,7 @@
 <?php
 $title= "Messages";
 //header file
-  require_once('template/header.php');
+include __DIR__ . '/../template/header.php';
 
   
   //check for submit delete;
@@ -25,9 +25,10 @@ $title= "Messages";
 
  ?>
  
- 
+ <?php if(isset($_SESSION['logged_in'])): ?>
  <div class="table-main">
- <h2> Recieved messages</h2>
+
+ 
  <table id="message">
  <thead>
  <tr>
@@ -54,7 +55,7 @@ $title= "Messages";
 	 <input type="hidden" name="delete_id" value="<?php echo $message['id'] ;?>">
 	  <input type="submit" name="delete" value="Delete" class="btn-danger">
 	 </form>
-	 <a class="btn-edit" href="<?php echo $config['App_Url'] ?>editmsg.php?id=<?php echo $message['id']; ?>">Edit</a>
+	
 	</td>
 	
  </tr>
@@ -64,4 +65,8 @@ $title= "Messages";
  
  </table>
  </div>
- <?php require_once('template/footer.php');?>
+  <?php else:  ?>
+<?php die('not found 😋') ?>
+
+<?php endif ?>
+<?php include __DIR__ . '/../template/footer.php';?>

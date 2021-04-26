@@ -70,8 +70,9 @@
 	 ul li a {
 		 margin:1rem;
 		 font-size:1.7rem;
-		 font-style:bold;
+		 font-style:bolder;
 		 color:#000;
+		 font-weight:400;
 		
 		 
 	 }
@@ -213,6 +214,13 @@
 		 
 	 }
 	 
+	 @media(max-width:600px)
+	   {
+		   .img-showcase img{
+			    width:400px;
+		   }
+	   }
+	 
 	 .btn-showcase{
 		 
 		 border:3px solid #000;
@@ -243,6 +251,13 @@
 		  margin:auto;
 		  overflow:auto;
 		  padding:0 2rem;
+	  }
+	  .line-clamp{
+	      white-space: nowrap;
+         text-overflow: ellipsis;
+         width: 250px;
+         display: block;
+         overflow: hidden
 	  }
 	   
 	   .card{
@@ -386,7 +401,26 @@
 	}
 	
 	
-
+	/* footer*/
+	footer{
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		height:20px;
+		padding:20px;
+		margin-top:22rem ;
+		color:#777;
+		
+	}
+	
+	footer a{
+        color:#777;
+		cursor:pointer;
+		
+	}
+	
+	
+     
 
 		  
 	  

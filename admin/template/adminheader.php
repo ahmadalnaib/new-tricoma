@@ -24,32 +24,6 @@ include __DIR__ . '/../../config/db.php';
   <title><?php echo $config['App_Name'] .  " | "  . $title ?> </title>
 </head>
 <body>
-<?php if(isset($_SESSION['logged_in'])): ?>
-<nav>
-<div class="logo">
-Gästebuch.
-</div>
-<ul>
-<li><a href="<?php echo $config['App_Url'] ?>">Hauptseite </a></li>
-<li><a href="<?php echo $config['App_Url'] ?>admin/index.php">Dashboard</a></li>
-<li><a href="<?php echo $config['App_Url']; ?>admin/messages/messages.php">Kommentare</a></li>
-<li><a href="<?php echo $config['App_Url'] ?>admin/users/index.php">Benutzer</a></li>
-  
- 
-  <li><a class="register" href="logout.php">Logout</a></li>
- 
 
 
-
-</ul>
-</nav>
-
-<header>
-<button id="toggle" class="toggle">
-<i class="fa fa-bars fa-2x"></i>
-</button>
-
-</header>
 <div class="container">
-<?php endif ?>
-<?php include'successmsg.php' ;?>

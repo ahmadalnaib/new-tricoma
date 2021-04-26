@@ -121,8 +121,9 @@ body.show-nav{
 	  padding-top: 12px;
 	  padding-bottom: 12px;
 	  text-align: left;
-	  background-color: #000;
-	  color: white;
+	  background-color: #FCD34D
+;
+	  color: #1E3A8A;
 	  text-align:center;
 	}
 	
@@ -256,3 +257,29 @@ body.show-nav{
 		 
 	 }
 	   
+	   
+	   
+	   /*admin page*/
+	   .main-admin{
+		   display:flex;
+		   height:50vh;
+		   justify-content:space-around;
+		   align-items:center;
+		   flex-wrap:wrap;
+		   text-align:center;
+		   
+	   }
+	   .main-admin img {
+		  
+		    border-radius: 8px;
+			 height:200px;
+			 width:200px;
+		   
+	   }
+	   
+	   .users-content,.comment-content{
+		   background:#30336b;
+		   padding:20px 40px;
+		   color:#fff;
+		   border-radius:5px;
+	   }

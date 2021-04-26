@@ -133,13 +133,13 @@
 		 
 		 $fileName=$uploadDir.'/'.$fileName ;
 		 
-		/* 
+		
 		 $insertMessage="insert into message (username,email,image,title,body)
 		                 values('$username','$email','$fileName','$title','$body')";
 						 
-		 $mysqli->query($insertMessage);	 */
+		 $mysqli->query($insertMessage);	 
 		 
-		 $statment=$mysqli->prepare("insert into message
+		/* $statment=$mysqli->prepare("insert into message
 		                (username,email,image,title,body)
 		  values(?,?,?,?,?)");
 		  $statment->bind_param('sssss',$dbUsername,$dbEmail,$dbImage,$dbTitle,$dbBody);
@@ -149,14 +149,14 @@
 		  $dbTitle=$title;
 		  $dbBody=$body;
 		  $statment->execute();
-		  
+		  */
 		 
 		 
 		
 		 
 			   
 		 
-		 session_destroy();
+		
 		 header('Location: index.php');
 		 
 	 }

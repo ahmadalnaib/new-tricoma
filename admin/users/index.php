@@ -26,9 +26,9 @@ include __DIR__ . '/../template/header.php';
 
  ?>
  
- 
+ <?php if(isset($_SESSION['logged_in'])): ?>
  <div class="table-main">
- <a class="register" href="create.php">Create user</a>
+
  
  <table id="message">
  <thead>
@@ -36,7 +36,6 @@ include __DIR__ . '/../template/header.php';
    <th>#</th>
    <th>name</th>
    <th>email</th>
-    <th>role</th>
    <th>actions</th>
  </tr>
  </thead>
@@ -48,13 +47,13 @@ include __DIR__ . '/../template/header.php';
  <td> <?php echo $user['id']; ?></td>
  <td> <?php echo $user['name']; ?></td>
  <td> <?php echo $user['email']; ?></td>
-  <td> <?php echo $user['role']; ?></td>
+ 
    <td>
      <form onsubmit="return confirm('Are you sure')" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 	 <input type="hidden" name="delete_id" value="<?php echo $user['id'] ;?>">
 	  <input type="submit" name="delete" value="Delete" class="btn-danger">
 	 </form>
-	 <a class="btn-edit" href="edit.php?id=<?php echo $user['id']; ?>">Edit</a>
+	
 	</td>
 	
  </tr>
@@ -64,5 +63,10 @@ include __DIR__ . '/../template/header.php';
  
  </table>
  </div>
+ 
+   <?php else:  ?>
+<?php die('not found 😋') ?>
+
+<?php endif ?>
  
 <?php include __DIR__ . '/../template/footer.php';?>

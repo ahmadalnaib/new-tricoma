@@ -15,7 +15,7 @@ $title= "Message";
 <div class="main-show-message">
 
 	<?php
-	$id=$_GET['id'];
+	$id= mysqli_real_escape_string($mysqli,$_GET['id']);
 	 $message= $mysqli->query("select * from message where id =".$id)->fetch_assoc();
 	
 	?>

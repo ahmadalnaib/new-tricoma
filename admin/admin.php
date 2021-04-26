@@ -1,15 +1,11 @@
 <?php
-$title= "Login";
-//header file
- require_once('template/header.php'); 
- //db file
-  require_once('config/db.php'); 
-  
+$title="admin";
+require_once('template/header.php');
+
   //check the user if login with session
   if(isset($_SESSION['logged_in'])){
 	  header('location:index.php');
   }
-  
   
   //for the err arry
   $errors=[];
@@ -17,6 +13,8 @@ $title= "Login";
   //for the value in form
   $email='';
 
+  
+ 
   if($_SERVER['REQUEST_METHOD']== 'POST'){
 	  $email=mysqli_real_escape_string($mysqli,$_POST['email']);
 	   $password=mysqli_real_escape_string($mysqli,$_POST['password']);
@@ -33,7 +31,7 @@ $title= "Login";
 				$_SESSION['user_id']=$user['id'];
 				$_SESSION['user_name']=$user['name'];
 				$_SESSION['success_message']="hey welecome Back $user[name] 🎉🎉";
-				header('location:admin/admin.php');
+				header('location:index.php');
 				die();
                
         }
@@ -51,7 +49,6 @@ $title= "Login";
 	  
 	  
   }
- 
  
     
  
@@ -96,7 +93,3 @@ $title= "Login";
 
  </div>
  
-
-
-<?php require_once('template/footer.php') ?>
-

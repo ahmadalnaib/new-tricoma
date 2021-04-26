@@ -20,9 +20,9 @@ $title= "Home";
 <section class="flex-showcase">
 
  <div class="content-showcase">
- <h1>Start Writing <br> Your <br> Next Great Story </h1>
- <p>Create better designs, user <br> experiences, and showcase your <br> application in style with — Tails.  </p>
- <a href="<?php echo $config['App_Url'] ?>contact.php" class="btn-showcase">Write Now</a>
+ <h1>Beginnen Sie mit<br> dem Schreiben <br> Ihre Kommentar </h1>
+ <p>Jedes Wort bedeutet für uns. </p>
+ <a href="<?php echo $config['App_Url'] ?>contact.php" class="btn-showcase">schreibe jetzt</a>
  </div>
  
   <div class="img-showcase">
@@ -33,7 +33,7 @@ $title= "Home";
 
    <div class="last"> 
  
-  <h3>See what others are saying </h3>
+  <h3>Sehen Sie, was andere sagen </h3>
    </div>
   
 
@@ -48,8 +48,10 @@ $title= "Home";
 <img src="<?php echo $config['App_Url'].$message['image'] ?>">
 <div>
 <h3><?php echo $message['username'] ?></h3>
-<p><?php echo $message['body'] ?></p>
-<a class="btn-show" href="<?php echo $config['App_Url'] ?>message.php?id=<?php echo $message['id']; ?>">Open</a>
+<p class="line-clamp"><?php echo $message['body'] ?></p>
+
+<a class="btn-show" href="<?php echo $config['App_Url'] ?>message.php?id=<?php echo $message['id']; ?>">Weiterlesen</a>
+
 </div>
 </section>
 <?php endforeach; ?>

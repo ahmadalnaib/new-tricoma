@@ -11,7 +11,6 @@ $title= "Contact";
     
  
  ?>
- <?php if(isset($_SESSION['logged_in'])): ?>
  
  
  <!--Html contact-form -->
@@ -19,7 +18,7 @@ $title= "Contact";
  
   <!--img -->
  <div class="contact-img">
- <p class="lead">Start Writing In <br> Gäestbuch ! </p>
+ <p class="lead">Schreiben  auf <br> was Sie denken ! </p>
  <img  src="img/tools-bg.webp">
  </div>
  
@@ -30,8 +29,8 @@ $title= "Contact";
  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="form" class="form" enctype="multipart/form-data">
 
  <div class="form-control">
- <label for="username">Username</label>
- <input type="text" name="username" value="<?php echo $username; ?>" id="username" placeholder="Enter username">
+ <label for="username">Nutzername</label>
+ <input type="text" name="username" value="<?php echo $username; ?>" id="username" placeholder="Enter Nutzername">
  <small class="text-err"><?php echo $usernameError ?></small>
  
  </div>
@@ -58,21 +57,18 @@ $title= "Contact";
  </div>
  
   <div class="form-control">
- <label for="body">Message</label>
+ <label for="body">Kommentar</label>
  <textarea name="body" id="body" cols="30" rows="10"><?php echo $body; ?></textarea>
  <small class="text-err"><?php echo $bodyError ?></small>
  </div>
  
- <button class="btn">Submit</button>
+ <button class="btn">einreichen</button>
 
  </form>
  </div>
  </div>
- 
-<?php else: ?>
- 
-<?php   header("location:register.php");?>
-<?php endif ?>
+
+
 
 <?php require_once('template/footer.php') ?>
 
