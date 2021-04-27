@@ -5,3 +5,4 @@
 * Diese Sie in der neuen neuen Datenbank zwei Tabellen zuerst benannten message die zweiten users
 * Erstellen Sie in der message 5 Spalten id,username,email,image,title,body,created_at
 * Erstellen Sie in der users 5 Spalten id,email,name,password,created_at
+* Als letztes erstellen  einen Benutzer in der users tabelle, um sich im Admin-Bereich anzumelden
