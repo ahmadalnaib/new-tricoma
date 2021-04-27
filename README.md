@@ -1,4 +1,4 @@
-# new-tricoma
+# Konfigurieren  das Projekt 🎉
 * Neue Datenbank erstellen
 * Gehen Sie zur config folder und bearbeiten Sie Ihren Datenbanknamen
 * Erstellen Sie in Ihrer neuen Datenbank zwei Tabellen
