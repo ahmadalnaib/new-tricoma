@@ -1,5 +1,5 @@
 # new-tricoma
-# Neue Datenbank erstellen
+* Neue Datenbank erstellen
 * Gehen Sie zur config folder und bearbeiten Sie Ihren Datenbanknamen
 * Erstellen Sie in Ihrer neuen Datenbank zwei Tabellen
 * Diese Sie in der neuen neuen Datenbank zwei Tabellen zuerst benannten message die zweiten users
